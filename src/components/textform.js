@@ -10,6 +10,12 @@ export default function TextForm(props) {
         setText(newText);
     }
 
+    // function invoking by clicking the convert to lowercase button
+    const handleLowClick = () =>{
+        let newText = text.toLocaleLowerCase();
+        setText(newText);
+    }
+
     // function invoking when we change the value in textarea (required for changing the value)
     const handleOnChange = (event)=>{
         // console.log("On change");
@@ -21,12 +27,26 @@ export default function TextForm(props) {
     // setText("new text"); correct way to change the state
 
     return (
-        <div>
+        <>
+        <div className='container'>
             <h2>{props.heading}</h2>
             <div className="form-group">
                 <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="10"></textarea>
             </div>
             <button className="btn btn-primary my-3" onClick={handleUpClick}>Convert to Uppercase</button>
+            <button className="btn btn-primary my-3 mx-3" onClick={handleLowClick}>Convert to Lowercase</button>
         </div>
+        <div className="container my-2">
+            <h3>Your text summary</h3>
+            {/* counting number of words and characters */}
+            <p>{text.split(" ").length} words and {text.length} characters</p>  
+
+            {/* Time to read */}
+            <p>{0.008 * text.split(" ").length} Minutes read</p>
+
+            <h3>Preview</h3>
+            <p>{text}</p>
+        </div>
+        </>
     )
 }

@@ -40,3 +40,11 @@
 .blank{
   color: red;
 }
+body{
+  background-image: url("https://i0.wp.com/www.storylogicmedia.com/wp-content/uploads/2013/08/paperbackground.jpg?fit=1010%2C758&ssl=1");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
