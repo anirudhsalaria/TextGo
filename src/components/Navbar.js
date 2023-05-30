@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
     return (
-        <nav className="navbar sticky-top navbar-dark navbar-expand-lg bg-dark">
+        <nav className={`navbar sticky-top navbar-${props.mode} navbar-expand-lg bg-${props.mode}`}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="/">{props.title}</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +19,14 @@ export default function Navbar(props) {
                             <a className="nav-link" href="/">{props.about}</a>
                         </li>
                     </ul>
-                    <form className="d-flex" role="search">
+                    <div class="form-check form-switch text-light">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                            <label class="form-check-label" for="flexSwitchCheckDefault">DarkMode</label>
+                    </div>
+                    {/* <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-primary" type="submit">Search</button>
-                    </form>
+                    </form> */}
                 </div>
             </div>
         </nav>
@@ -36,7 +40,7 @@ Navbar.propTypes = {
 }
 
 // setting default props
-Navbar.defaultProps ={
+Navbar.defaultProps = {
     title: "Set title here",
     about: "Set about text here"
 }
