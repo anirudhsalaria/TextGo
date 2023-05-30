@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TextGo/static/css/main.3dcd4c44.css",
+    "main.js": "/TextGo/static/js/main.6e1d536d.js",
+    "static/js/787.28cb0dcd.chunk.js": "/TextGo/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/TextGo/index.html",
+    "main.3dcd4c44.css.map": "/TextGo/static/css/main.3dcd4c44.css.map",
+    "main.6e1d536d.js.map": "/TextGo/static/js/main.6e1d536d.js.map",
+    "787.28cb0dcd.chunk.js.map": "/TextGo/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3dcd4c44.css",
+    "static/js/main.6e1d536d.js"
+  ]
+}
