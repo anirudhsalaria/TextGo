@@ -22,6 +22,19 @@ export default function TextForm(props) {
         setText(newText);
     }
 
+    // function for copying text
+    const handleCopy = () =>{
+        var text = document.getElementById("myBox")
+        text.select();
+        navigator.clipboard.writeText(text.value);
+    }
+
+    // removing extra spaces
+    const handleExtraSpaces = () =>{
+        let newText =text.split(/[ ]+/);
+        setText(newText.join(" "));
+    }
+
     // function invoking when we change the value in textarea (required for changing the value)
     const handleOnChange = (event)=>{
         // console.log("On change");
@@ -42,6 +55,8 @@ export default function TextForm(props) {
             <button className="btn btn-primary my-3" onClick={handleUpClick}>Convert to Uppercase</button>
             <button className="btn btn-primary my-3 mx-3" onClick={handleLowClick}>Convert to Lowercase</button>
             <button className="btn btn-primary my-3" onClick={handleClear}>Clear Text</button>
+            <button className="btn btn-primary my-3 mx-3" onClick={handleCopy}>Copy Text</button>
+            <button className="btn btn-primary my-3" onClick={handleExtraSpaces}>Remove extra space</button>
         </div>
         <div className="container my-2">
             <h3>Your text summary</h3>
