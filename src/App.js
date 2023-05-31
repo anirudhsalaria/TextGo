@@ -1,6 +1,8 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/textform';
+import Black from './components/black.jpg';
+import White from './components/white.jpg';
 import React, { useState } from 'react'
 
 
@@ -11,11 +13,11 @@ function App() {
   const toggleMode = () =>{
     if(mode === 'light'){
       setMode('dark');
-      document.body.style.backgroundImage=`url(${process.env.PUBLIC_URL+ "https://wallpapercave.com/wp/wp2533041.jpg"})`;
+      document.body.style.backgroundImage=`url(${Black})`;
     }
     else{
       setMode('light');
-      document.body.style.backgroundImage=`url(${process.env.PUBLIC_URL+ "https://i0.wp.com/www.storylogicmedia.com/wp-content/uploads/2013/08/paperbackground.jpg?fit=1010%2C758&ssl=1"})`;
+      document.body.style.backgroundImage=`url(${White})`;
     }
   }
 
