@@ -1,4 +1,4 @@
-l### TextGo
+### TextGo
 TextGo is a website made using ReactJS. Using TextGo you can perform multiple operations on your text, such as Convert to uppercase, lowercase, copy text, clear text and remove extra space.
 ### Stack used
 1. ReactJS
